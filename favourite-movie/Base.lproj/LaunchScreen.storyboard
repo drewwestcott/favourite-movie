@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,8 +17,55 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pexels-photo-65128" translatesAutoresizingMaskIntoConstraints="NO" id="qeE-pd-n81">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="8Zh-wA-TYi">
+                                <rect key="frame" x="297" y="372" width="240" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Wzh-Xt-Ude"/>
+                                    <constraint firstAttribute="height" constant="140" id="Ylj-6u-0G3"/>
+                                    <constraint firstAttribute="width" constant="240" id="mry-xr-KDf"/>
+                                    <constraint firstAttribute="height" constant="137" id="yPE-By-1oo"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="mry-xr-KDf"/>
+                                        <exclude reference="yPE-By-1oo"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="mry-xr-KDf"/>
+                                        <include reference="yPE-By-1oo"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qeE-pd-n81" secondAttribute="trailing" id="5NQ-sP-N6U"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="8Zh-wA-TYi" secondAttribute="bottom" constant="88" id="CTL-MU-yVs"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="8Zh-wA-TYi" secondAttribute="bottom" constant="30" id="VvB-UX-T9l"/>
+                            <constraint firstItem="qeE-pd-n81" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="fPX-kB-cMb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8Zh-wA-TYi" secondAttribute="trailing" constant="43" id="k2q-6S-XfY"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="qeE-pd-n81" secondAttribute="bottom" id="mWo-37-cw8"/>
+                            <constraint firstItem="qeE-pd-n81" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="r3A-cd-AtC"/>
+                            <constraint firstItem="8Zh-wA-TYi" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="tEK-7n-qNv"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="tEK-7n-qNv"/>
+                                <exclude reference="VvB-UX-T9l"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="tEK-7n-qNv"/>
+                                <include reference="VvB-UX-T9l"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +73,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Splash" width="178" height="103"/>
+        <image name="pexels-photo-65128" width="4752" height="3168"/>
+    </resources>
 </document>
